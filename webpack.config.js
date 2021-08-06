@@ -4,8 +4,9 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin"); // THIS LINE
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   plugins: [new MiniCssExtractPlugin()], // THIS LINE IS NEW 
-  entry: ['./src/index.js'],
+  entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
